@@ -1,9 +1,15 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/logos/logos/500x500_circle.png" width="90" />
-  <h2 align="center">Catppuccin for DDG</h2>
-</p>
+<h3 align="center">
+	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
+	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/misc/transparent.png" height="30" width="0px"/>
+	Catppuccin for DuckDuckGo
+	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/misc/transparent.png" height="30" width="0px"/>
+</h3>
 
-<p align="center">Vibrant pastel theme for the high-spirited!</p>
+<p align="center">
+    <a href="https://github.com/catppuccin/duckduckgo/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/duckduckgo?colorA=1e1e28&colorB=c9cbff&style=for-the-badge&logo=starship style=for-the-badge"></a>
+    <a href="https://github.com/catppuccin/duckduckgo/issues"><img src="https://img.shields.io/github/issues/catppuccin/duckduckgo?colorA=1e1e28&colorB=f7be95&style=for-the-badge"></a>
+    <a href="https://github.com/catppuccin/duckduckgo/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/duckduckgo?colorA=1e1e28&colorB=b1e1a6&style=for-the-badge"></a>
+</p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/misc/sample.png"/>
@@ -18,4 +24,4 @@
 
 ## 💝 Thanks to
 
-- [Human](https://github.com/catppuccin)
+-   [Human](https://github.com/catppuccin)
