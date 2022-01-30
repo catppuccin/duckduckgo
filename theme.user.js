@@ -13,7 +13,7 @@
 (function() {
     'use strict';
 
-	const theme = [
+    const theme = [
         '1=-1', '18=1', 'a=-1', 'ae=d', 'ao=-1', 'ap=-1', 'aq=-1', 'au=-1',
         'ax=-1', 'bc=1', 'l=wt-wt', 's=m', '21=302D41', '7=1E1E29', '8=C3BAC6',
         '9=A4B9EF', 'aa=BEE4ED', 'j=1A1823', 'x=A4B9EF',
