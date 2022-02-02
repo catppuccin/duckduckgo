@@ -11,9 +11,7 @@
     <a href="https://github.com/catppuccin/duckduckgo/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/duckduckgo?colorA=1e1e28&colorB=b1e1a6&style=for-the-badge"></a>
 </p>
 
-<p align="center">
-  <img src="./assets/vivaldi@astro 2021-12-22 19.54.58.png"/>
-</p>
+![DuckDuckGo Theme Preview](assets/preview.png)
 
 ## Usage
 
