@@ -15,7 +15,7 @@
 
     const theme = [
         '21=302D41', '7=1E1E2E', '8=D9E0EE', '9=F5E0DC', 'aa=C9CBFF',
-        'ae=1E1E2E', 'j=302D41', 'x=F5E0DC'
+        'ae=1E1E2E', 'j=302D41', 'x=F5E0DC',
     ];
 
     for (const item of theme) {
