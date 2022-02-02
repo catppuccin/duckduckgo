@@ -25,9 +25,8 @@
 
     ```js
     const theme = [
-        '1=-1', '18=1', 'a=-1', 'ae=d', 'ao=-1', 'ap=-1', 'aq=-1', 'au=-1',
-        'ax=-1', 'bc=1', 'l=wt-wt', 's=m', '21=302D41', '7=1E1E29', '8=C3BAC6',
-        '9=A4B9EF', 'aa=BEE4ED', 'j=1A1823', 'x=A4B9EF',
+        '21=302D41', '7=1E1E2E', '8=D9E0EE', '9=F5E0DC', 'aa=C9CBFF',
+        'ae=1E1E2E', 'j=302D41', 'x=F5E0DC'
     ];
 
     for (const item of theme) {
@@ -41,7 +40,7 @@
 ## Demo
 
 You can take a look at how this theme will look by visiting the
-[bookmarklet](https://duckduckgo.com/?kae=d&k1=-1&k18=1&ka=-1&kao=-1&kap=-1&kaq=-1&kau=-1&kax=-1&kl=wt-wt&ks=m&k21=302D41&k7=1E1E29&k8=C3BAC6&k9=A4B9EF&kaa=BEE4ED&kj=1A1823&kx=A4B9EF).
+[bookmarklet](https://duckduckgo.com/?k21=302D41&k7=1E1E2E&k8=D9E0EE&k9=F5E0DC&kaa=C9CBFF&kae=1E1E2E&kj=302D41&kx=F5E0DC).
 
 ## Userscript
 
