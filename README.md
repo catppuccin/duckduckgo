@@ -6,9 +6,9 @@
 </h3>
 
 <p align="center">
-    <a href="https://github.com/catppuccin/duckduckgo/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/duckduckgo?colorA=1e1e28&colorB=c9cbff&style=for-the-badge&logo=starship style=for-the-badge"></a>
-    <a href="https://github.com/catppuccin/duckduckgo/issues"><img src="https://img.shields.io/github/issues/catppuccin/duckduckgo?colorA=1e1e28&colorB=f7be95&style=for-the-badge"></a>
-    <a href="https://github.com/catppuccin/duckduckgo/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/duckduckgo?colorA=1e1e28&colorB=b1e1a6&style=for-the-badge"></a>
+	<a href="https://github.com/catppuccin/duckduckgo/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/duckduckgo?colorA=1e1e28&colorB=c9cbff&style=for-the-badge&logo=starship style=for-the-badge"></a>
+	<a href="https://github.com/catppuccin/duckduckgo/issues"><img src="https://img.shields.io/github/issues/catppuccin/duckduckgo?colorA=1e1e28&colorB=f7be95&style=for-the-badge"></a>
+	<a href="https://github.com/catppuccin/duckduckgo/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/duckduckgo?colorA=1e1e28&colorB=b1e1a6&style=for-the-badge"></a>
 </p>
 
 ![DuckDuckGo Theme Preview](assets/preview.png)
@@ -21,16 +21,16 @@
 4. If you are using Firefox, type `allow pasting`.
 5. Enter the following script:
 
-    ```js
-    const theme = [
-        '21=302D41', '7=1E1E2E', '8=D9E0EE', '9=F5E0DC', 'aa=C9CBFF',
-        'ae=1E1E2E', 'j=302D41', 'x=F5E0DC',
-    ];
+	```js
+	const theme = [
+		'21=302D41', '7=1E1E2E', '8=D9E0EE', '9=F5E0DC', 'aa=C9CBFF',
+		'ae=1E1E2E', 'j=302D41', 'x=F5E0DC',
+	];
 
-    for (const item of theme) {
-        document.cookie = `${item}; max-age=126144000; samesite=lax; secure`;
-    }
-    ```
+	for (const item of theme) {
+		document.cookie = `${item}; max-age=126144000; samesite=lax; secure`;
+	}
+	```
 
 6. Reload the page.
 7. Enjoy the theme 😄
