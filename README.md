@@ -15,41 +15,18 @@
 
 ## Usage
 
-1. Visit <https://duckduckgo.com>.
-2. Right click and select the “Inspect” button.
-3. Select the “Console” tab.
-4. If you are using Firefox, type `allow pasting`.
-5. Enter the following script:
+1. Bookmark this <a href="javascript:(function()%7Bconst%20colors%3D%7Blatte%3A%7Bbase%3A%22%23eff1f5%22%2Cblue%3A%22%231e66f5%22%2Clavender%3A%22%237287fd%22%2Cmantle%3A%22%23e6e9ef%22%2Crosewater%3A%22%23dc8a78%22%2Ctext%3A%22%234c4f69%22%7D%2Cfrappe%3A%7Bbase%3A%22%23303446%22%2Cblue%3A%22%238caaee%22%2Clavender%3A%22%23babbf1%22%2Cmantle%3A%22%23292c3c%22%2Crosewater%3A%22%23f2d5cf%22%2Ctext%3A%22%23c6d0f5%22%7D%2Cmacchiato%3A%7Bbase%3A%22%2324273a%22%2Cblue%3A%22%238aadf4%22%2Clavender%3A%22%23b7bdf8%22%2Cmantle%3A%22%231e2030%22%2Crosewater%3A%22%23f4dbd6%22%2Ctext%3A%22%23cad3f5%22%7D%2Cmocha%3A%7Bbase%3A%22%231e1e2e%22%2Cblue%3A%22%2389b4fa%22%2Clavender%3A%22%23b4befe%22%2Cmantle%3A%22%23181825%22%2Crosewater%3A%22%23f5e0dc%22%2Ctext%3A%22%23cdd6f4%22%7D%7D%3Bconst%20flavour%3Dwindow.prompt(%22Choose%20a%20theme%3A%22%2C%22mocha%22)%3Bconst%20blueLinks%3Dconfirm(%22Use%20blue%20links%3F%22)%3Bconst%20ct%3Dcolors%5Bflavour%5D%3Bconst%20theme%3D%5B%6021%3D%24%7Bct.mantle%20%7D%60%2C%607%3D%24%7Bct.base%20%7D%60%2C%608%3D%24%7Bct.text%20%7D%60%2C%609%3D%24%7BblueLinks%3Fct.blue%3Act.rosewater%20%7D%60%2C%60aa%3D%24%7Bct.lavender%20%7D%60%2C%60ae%3D%24%7Bflavour%3D%3D%22latte%22%3F-1%3Act.base%20%7D%60%2C%60j%3D%24%7Bct.mantle%20%7D%60%2C%60x%3D%24%7BblueLinks%3Fct.blue%3Act.rosewater%20%7D%60%5D%3Bfor(const%20item%20of%20theme)%7Bdocument.cookie%3D%60%24%7B%20item%20%7D%3B%20max-age%3D126144000%3B%20samesite%3Dlax%3B%20secure%60%7D%7D)()%3B">Bookmarklet</a>
+2. Visit <https://duckduckgo.com>.
+3. Run the bookmarklet.
+4. Reload the page.
 
-	```js
-	const theme = [
-		'21=302D41', '7=1E1E2E', '8=D9E0EE', '9=F5E0DC', 'aa=C9CBFF',
-		'ae=1E1E2E', 'j=302D41', 'x=F5E0DC',
-	];
-
-	for (const item of theme) {
-		document.cookie = `${item}; max-age=126144000; samesite=lax; secure`;
-	}
-	```
-
-6. Reload the page.
-7. Enjoy the theme 😄
-
-## Demo
-
-You can take a look at how this theme will look by visiting the
-[bookmarklet](https://duckduckgo.com/?k21=302D41&k7=1E1E2E&k8=D9E0EE&k9=F5E0DC&kaa=C9CBFF&kae=1E1E2E&kj=302D41&kx=F5E0DC).
-
-## Userscript
-
-You can also use a userscript manager extension. To do so, open the following link to
-install the
-[userscript](https://raw.githubusercontent.com/catppuccin/duckduckgo/main/theme.user.js).
+You can find the source for the bookmarklet in `./bookmarklet.js`.
 
 ## 💝 Thanks to
 
 - [Astro](https://github.com/narutoxy)
 - [esdmr](https://github.com/esdmr)
+- [winston](https://github.com/nekowinston)
 
 &nbsp;
 
