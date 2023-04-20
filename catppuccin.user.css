@@ -1,0 +1,136 @@
+/* ==UserStyle==
+@name           DuckDuckGo Catppuccin
+@namespace      github.com/catppuccin/duckduckgo
+@version        1.0.0
+@description    Soothing pastel theme for DuckDuckGo
+@author         catppuccin
+@updateURL      https://github.com/catppuccin/duckduckgo/raw/main/catppuccin.user.css
+@preprocessor   stylus
+@var select theme "Theme" ["latte:Latte", "frappe:Frappe", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accent "Accent" ["'rosewater'", "'flamingo'", "'pink'", "'mauve'", "'red'", "'maroon'", "'peach'", "'yellow'", "'green'", "'teal'", "'blue'*", "'sapphire'", "'sky'", "'lavender'"]
+==/UserStyle== */
+
+@-moz-document domain("duckduckgo.com") {
+    @import url("https://unpkg.com/@catppuccin/palette@0.1.6/css/catppuccin.css");
+    html { 
+        --ctp-rosewater: var(--ctp- + theme + "-rosewater");
+        --ctp-flamingo: var(--ctp- + theme + "-flamingo");
+        --ctp-pink: var(--ctp- + theme + "-pink");
+        --ctp-mauve: var(--ctp- + theme + "-mauve");
+        --ctp-red: var(--ctp- + theme + "-red");
+        --ctp-maroon: var(--ctp- + theme + "-maroon");
+        --ctp-peach: var(--ctp- + theme + "-peach");
+        --ctp-yellow: var(--ctp- + theme + "-yellow");
+        --ctp-green: var(--ctp- + theme + "-green");
+        --ctp-teal: var(--ctp- + theme + "-teal");
+        --ctp-sky: var(--ctp- + theme + "-sky");
+        --ctp-sapphire: var(--ctp- + theme + "-sapphire");
+        --ctp-blue: var(--ctp- + theme + "-blue");
+        --ctp-lavender: var(--ctp- + theme + "-lavender");
+        --ctp-text: var(--ctp- + theme + "-text");
+        --ctp-subtext1: var(--ctp- + theme + "-subtext1");
+        --ctp-subtext0: var(--ctp- + theme + "-subtext0");
+        --ctp-overlay2: var(--ctp- + theme + "-overlay2");
+        --ctp-overlay0: var(--ctp- + theme + "-overlay0");
+        --ctp-surface2: var(--ctp- + theme + "-surface2");
+        --ctp-surface1: var(--ctp- + theme + "-surface1");
+        --ctp-surface0: var(--ctp- + theme + "-surface0");
+        --ctp-base: var(--ctp- + theme + "-base");
+        --ctp-mantle: var(--ctp- + theme + "-mantle");
+        --ctp-crust: var(--ctp- + theme + "-crust");
+        --accent: var(--ctp- + accent);
+    }
+    
+    html, body, .body--home, .site-wrapper, .region__body, .badge-link, .module--carousel__image-wrapper, .result__image, .vertical--map__sidebar, .vertical--map__sidebar__header, .page-chrome_newtab, .zci--type--tiles:not(.is-fallback).is-full-page.is-expanded, .zci--type--tiles:not(.is-fallback).is-full-page.is-expanded .metabar:not(.is-stuck) {
+        background-color: var(--ctp-base);
+    }
+    
+    body, input, select, textarea, .search__input--adv, .adv {
+        color: var(--ctp-text);
+    }
+    
+    .header-wrap {
+        background-color: var(--ctp-mantle) !important;
+    }
+    
+    .search--home, .search--header, .acp-wrap, .acp-footer {
+        background-color: var(--ctp-surface0);
+        border-color: var(--ctp-surface0);
+    }
+    
+    .search__button, .search__button--hero, .search__clear, .search--home.has-text .search__clear, .search__clear:focus, .search__clear:hover, .search__clear:active, .search__clear:active:focus, .search__clear:active:hover {
+        color: var(--ctp-text);
+    }
+    
+    .search__input::placeholder, .search__input--adv::placeholder {
+        color: var(--ctp-overlay1);
+    }
+    
+    .search--hover .search__button {
+        background-color: var(--accent) !important;
+        color: var(--ctp-crust) !important;
+    }
+
+    .btn--icon, .header__link, .header__link:visited, .header__label, .showcase .social__link__text, .header__button--menu, .no-touch .btn--icon, .no-touch .header__button, .no-touch .header__button--menu {
+        color: var(--ctp-text);
+    }
+    
+    a.header--text_promo--link, a.header--text_promo--link:active, a.header--text_promo--link:visited, a.header--text_promo--link:hover {
+        color: var(--ctp-text);
+    }
+
+    .text_promo--badge {
+        background-color: var(--ctp-yellow);
+        color: var(--ctp-crust);
+    }
+
+    .showcase .showcase__heading, .showcase .social__link__text:hover, .header__link:hover, .header__label:hover, .header__clickable:hover {
+        color: var(--ctp-text);
+    }
+
+    .no-touch .site-wrapper .zcm__link, .zcm__link, .zcm__link:visited {
+        color: var(--ctp-text);
+    }
+
+    .dark-bg.is-vertical-tabs-exp #duckbar .zcm__link:not(.dropdown__button).is-active, .dark-bg.is-vertical-tabs-exp #duckbar .zcm__link:not(.dropdown__button).is-active:active, .dark-bg.is-vertical-tabs-exp #duckbar .zcm__link:not(.dropdown__button).is-active:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+    }
+
+    .dropdown .dropdown__button {
+        color: var(--ctp-text);
+    }
+
+    #links {
+        --theme-col-txt-title: var(--ctp-text) !important;
+        --theme-col-txt-url: var(--ctp-text) !important;
+        --theme-col-txt-url-domain: var(--ctp-subtext1) !important;
+        --theme-col-txt-url-path: var(--ctp-subtext1) !important;
+        --theme-col-txt-snippet: var(--ctp-text) !important;
+        --theme-col-bg-page: var(--ctp-mantle) !important;
+    }
+
+    .modal--popout .modal__box::after {
+        color: var(--ctp-mantle);
+        border-color: var(--ctp-mantle) !important;
+    }
+
+    .user-loc-tooltip__address, .modal__header, .modal--dropdown--region .modal__header .frm__input {
+        background-color: var(--ctp-mantle);
+        color: var(--ctp-text);
+    }
+
+    .modal--dropdown--region.modal--popout .modal__header::before {
+        color: var(--ctp-subtext1);
+    }
+
+    .modal__list__link:hover, .modal__list__link.is-active, .modal__list__link.is-highlighted, .modal--dropdown--region .modal__list__link.is-highlighted, .highlight .result__image, .switch, .modal--dropdown--settings .settings-dropdown--section .frm__field .frm__switch .frm__switch__label.btn {
+    background-color: var(--ctp-surface0);
+    color: var(--ctp-text);
+    }
+
+    .modal__body {
+        color: var(--ctp-text) !important;
+        background-color: var(--ctp-mantle) !important;
+    }
+}
