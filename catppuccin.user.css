@@ -5,132 +5,306 @@
 @description    Soothing pastel theme for DuckDuckGo
 @author         catppuccin
 @updateURL      https://github.com/catppuccin/duckduckgo/raw/main/catppuccin.user.css
-@preprocessor   stylus
+@preprocessor   less
 @var select theme "Theme" ["latte:Latte", "frappe:Frappe", "macchiato:Macchiato", "mocha:Mocha*"]
-@var select accent "Accent" ["'rosewater'", "'flamingo'", "'pink'", "'mauve'", "'red'", "'maroon'", "'peach'", "'yellow'", "'green'", "'teal'", "'blue'*", "'sapphire'", "'sky'", "'lavender'"]
+@var select accentColour "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve", "red:Red*", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Grey"]
 ==/UserStyle== */
-
 @-moz-document domain("duckduckgo.com") {
-    @import url("https://unpkg.com/@catppuccin/palette@0.1.6/css/catppuccin.css");
-    html { 
-        --ctp-rosewater: var(--ctp- + theme + "-rosewater");
-        --ctp-flamingo: var(--ctp- + theme + "-flamingo");
-        --ctp-pink: var(--ctp- + theme + "-pink");
-        --ctp-mauve: var(--ctp- + theme + "-mauve");
-        --ctp-red: var(--ctp- + theme + "-red");
-        --ctp-maroon: var(--ctp- + theme + "-maroon");
-        --ctp-peach: var(--ctp- + theme + "-peach");
-        --ctp-yellow: var(--ctp- + theme + "-yellow");
-        --ctp-green: var(--ctp- + theme + "-green");
-        --ctp-teal: var(--ctp- + theme + "-teal");
-        --ctp-sky: var(--ctp- + theme + "-sky");
-        --ctp-sapphire: var(--ctp- + theme + "-sapphire");
-        --ctp-blue: var(--ctp- + theme + "-blue");
-        --ctp-lavender: var(--ctp- + theme + "-lavender");
-        --ctp-text: var(--ctp- + theme + "-text");
-        --ctp-subtext1: var(--ctp- + theme + "-subtext1");
-        --ctp-subtext0: var(--ctp- + theme + "-subtext0");
-        --ctp-overlay2: var(--ctp- + theme + "-overlay2");
-        --ctp-overlay0: var(--ctp- + theme + "-overlay0");
-        --ctp-surface2: var(--ctp- + theme + "-surface2");
-        --ctp-surface1: var(--ctp- + theme + "-surface1");
-        --ctp-surface0: var(--ctp- + theme + "-surface0");
-        --ctp-base: var(--ctp- + theme + "-base");
-        --ctp-mantle: var(--ctp- + theme + "-mantle");
-        --ctp-crust: var(--ctp- + theme + "-crust");
-        --accent: var(--ctp- + accent);
-    }
-    
-    html, body, .body--home, .site-wrapper, .region__body, .badge-link, .module--carousel__image-wrapper, .result__image, .vertical--map__sidebar, .vertical--map__sidebar__header, .page-chrome_newtab, .zci--type--tiles:not(.is-fallback).is-full-page.is-expanded, .zci--type--tiles:not(.is-fallback).is-full-page.is-expanded .metabar:not(.is-stuck) {
-        background-color: var(--ctp-base);
-    }
-    
-    body, input, select, textarea, .search__input--adv, .adv {
-        color: var(--ctp-text);
-    }
-    
-    .header-wrap {
-        background-color: var(--ctp-mantle) !important;
-    }
-    
-    .search--home, .search--header, .acp-wrap, .acp-footer {
-        background-color: var(--ctp-surface0);
-        border-color: var(--ctp-surface0);
-    }
-    
-    .search__button, .search__button--hero, .search__clear, .search--home.has-text .search__clear, .search__clear:focus, .search__clear:hover, .search__clear:active, .search__clear:active:focus, .search__clear:active:hover {
-        color: var(--ctp-text);
-    }
-    
-    .search__input::placeholder, .search__input--adv::placeholder {
-        color: var(--ctp-overlay1);
-    }
-    
-    .search--hover .search__button {
-        background-color: var(--accent) !important;
-        color: var(--ctp-crust) !important;
-    }
-
-    .btn--icon, .header__link, .header__link:visited, .header__label, .showcase .social__link__text, .header__button--menu, .no-touch .btn--icon, .no-touch .header__button, .no-touch .header__button--menu {
-        color: var(--ctp-text);
-    }
-    
-    a.header--text_promo--link, a.header--text_promo--link:active, a.header--text_promo--link:visited, a.header--text_promo--link:hover {
-        color: var(--ctp-text);
-    }
-
-    .text_promo--badge {
-        background-color: var(--ctp-yellow);
-        color: var(--ctp-crust);
-    }
-
-    .showcase .showcase__heading, .showcase .social__link__text:hover, .header__link:hover, .header__label:hover, .header__clickable:hover {
-        color: var(--ctp-text);
-    }
-
-    .no-touch .site-wrapper .zcm__link, .zcm__link, .zcm__link:visited {
-        color: var(--ctp-text);
-    }
-
-    .dark-bg.is-vertical-tabs-exp #duckbar .zcm__link:not(.dropdown__button).is-active, .dark-bg.is-vertical-tabs-exp #duckbar .zcm__link:not(.dropdown__button).is-active:active, .dark-bg.is-vertical-tabs-exp #duckbar .zcm__link:not(.dropdown__button).is-active:hover {
-        color: var(--accent);
-        border-color: var(--accent);
-    }
-
-    .dropdown .dropdown__button {
-        color: var(--ctp-text);
-    }
-
-    #links {
-        --theme-col-txt-title: var(--ctp-text) !important;
-        --theme-col-txt-url: var(--ctp-text) !important;
-        --theme-col-txt-url-domain: var(--ctp-subtext1) !important;
-        --theme-col-txt-url-path: var(--ctp-subtext1) !important;
-        --theme-col-txt-snippet: var(--ctp-text) !important;
-        --theme-col-bg-page: var(--ctp-mantle) !important;
-    }
-
-    .modal--popout .modal__box::after {
-        color: var(--ctp-mantle);
-        border-color: var(--ctp-mantle) !important;
-    }
-
-    .user-loc-tooltip__address, .modal__header, .modal--dropdown--region .modal__header .frm__input {
-        background-color: var(--ctp-mantle);
-        color: var(--ctp-text);
-    }
-
-    .modal--dropdown--region.modal--popout .modal__header::before {
-        color: var(--ctp-subtext1);
-    }
-
-    .modal__list__link:hover, .modal__list__link.is-active, .modal__list__link.is-highlighted, .modal--dropdown--region .modal__list__link.is-highlighted, .highlight .result__image, .switch, .modal--dropdown--settings .settings-dropdown--section .frm__field .frm__switch .frm__switch__label.btn {
-    background-color: var(--ctp-surface0);
-    color: var(--ctp-text);
+    @catppuccin: {
+        @latte: {
+            @rosewater: #dc8a78;
+            @flamingo: #dd7878;
+            @pink: #ea76cb;
+            @mauve: #8839ef;
+            @red: #d20f39;
+            @maroon: #e64553;
+            @peach: #fe640b;
+            @yellow: #df8e1d;
+            @green: #40a02b;
+            @teal: #179299;
+            @sky: #04a5e5;
+            @sapphire: #209fb5;
+            @blue: #1e66f5;
+            @lavender: #7287fd;
+            @text: #4c4f69;
+            @subtext1: #5c5f77;
+            @subtext0: #6c6f85;
+            @overlay2: #7c7f93;
+            @overlay1: #8c8fa1;
+            @overlay0: #9ca0b0;
+            @surface2: #acb0be;
+            @surface1: #bcc0cc;
+            @surface0: #ccd0da;
+            @base: #eff1f5;
+            @mantle: #e6e9ef;
+            @crust: #dce0e8;
+        }
+        @frappe: {
+            @rosewater: #f2d5cf;
+            @flamingo: #eebebe;
+            @pink: #f4b8e4;
+            @mauve: #ca9ee6;
+            @red: #e78284;
+            @maroon: #ea999c;
+            @peach: #ef9f76;
+            @yellow: #e5c890;
+            @green: #a6d189;
+            @teal: #81c8be;
+            @sky: #99d1db;
+            @sapphire: #85c1dc;
+            @blue: #8caaee;
+            @lavender: #babbf1;
+            @text: #c6d0f5;
+            @subtext1: #b5bfe2;
+            @subtext0: #a5adce;
+            @overlay2: #949cbb;
+            @overlay1: #838ba7;
+            @overlay0: #737994;
+            @surface2: #626880;
+            @surface1: #51576d;
+            @surface0: #414559;
+            @base: #303446;
+            @mantle: #292c3c;
+            @crust: #232634;
+        }
+        @macchiato: {
+            @rosewater: #f4dbd6;
+            @flamingo: #f0c6c6;
+            @pink: #f5bde6;
+            @mauve: #c6a0f6;
+            @red: #ed8796;
+            @maroon: #ee99a0;
+            @peach: #f5a97f;
+            @yellow: #eed49f;
+            @green: #a6da95;
+            @teal: #8bd5ca;
+            @sky: #91d7e3;
+            @sapphire: #7dc4e4;
+            @blue: #8aadf4;
+            @lavender: #b7bdf8;
+            @text: #cad3f5;
+            @subtext1: #b8c0e0;
+            @subtext0: #a5adcb;
+            @overlay2: #939ab7;
+            @overlay1: #8087a2;
+            @overlay0: #6e738d;
+            @surface2: #5b6078;
+            @surface1: #494d64;
+            @surface0: #363a4f;
+            @base: #24273a;
+            @mantle: #1e2030;
+            @crust: #181926;
+        }
+        @mocha: {
+            @rosewater: #f5e0dc;
+            @flamingo: #f2cdcd;
+            @pink: #f5c2e7;
+            @mauve: #cba6f7;
+            @red: #f38ba8;
+            @maroon: #eba0ac;
+            @peach: #fab387;
+            @yellow: #f9e2af;
+            @green: #a6e3a1;
+            @teal: #94e2d5;
+            @sky: #89dceb;
+            @sapphire: #74c7ec;
+            @blue: #89b4fa;
+            @lavender: #b4befe;
+            @text: #cdd6f4;
+            @subtext1: #bac2de;
+            @subtext0: #a6adc8;
+            @overlay2: #9399b2;
+            @overlay1: #7f849c;
+            @overlay0: #6c7086;
+            @surface2: #585b70;
+            @surface1: #45475a;
+            @surface0: #313244;
+            @base: #1e1e2e;
+            @mantle: #181825;
+            @crust: #11111b;
+        }
     }
 
-    .modal__body {
-        color: var(--ctp-text) !important;
-        background-color: var(--ctp-mantle) !important;
+    html {
+        #catppuccin(@theme, @accentColour);
+    }
+
+    #catppuccin(@lookup, @accent) {
+        @rosewater: @catppuccin[@@lookup][@rosewater];
+        @flamingo: @catppuccin[@@lookup][@flamingo];
+        @pink: @catppuccin[@@lookup][@pink];
+        @mauve: @catppuccin[@@lookup][@mauve];
+        @red: @catppuccin[@@lookup][@red];
+        @maroon: @catppuccin[@@lookup][@maroon];
+        @peach: @catppuccin[@@lookup][@peach];
+        @yellow: @catppuccin[@@lookup][@yellow];
+        @green: @catppuccin[@@lookup][@green];
+        @teal: @catppuccin[@@lookup][@teal];
+        @sky: @catppuccin[@@lookup][@sky];
+        @sapphire: @catppuccin[@@lookup][@sapphire];
+        @blue: @catppuccin[@@lookup][@blue];
+        @lavender: @catppuccin[@@lookup][@lavender];
+        @text: @catppuccin[@@lookup][@text];
+        @subtext1: @catppuccin[@@lookup][@subtext1];
+        @subtext0: @catppuccin[@@lookup][@subtext0];
+        @overlay2: @catppuccin[@@lookup][@overlay2];
+        @overlay1: @catppuccin[@@lookup][@overlay1];
+        @overlay0: @catppuccin[@@lookup][@overlay0];
+        @surface2: @catppuccin[@@lookup][@surface2];
+        @surface1: @catppuccin[@@lookup][@surface1];
+        @surface0: @catppuccin[@@lookup][@surface0];
+        @base: @catppuccin[@@lookup][@base];
+        @mantle: @catppuccin[@@lookup][@mantle];
+        @crust: @catppuccin[@@lookup][@crust];
+        @accent-colour: @catppuccin[@@lookup][@@accent];
+
+        &,
+        body,
+        .body--home,
+        .site-wrapper,
+        .region__body,
+        .badge-link,
+        .module--carousel__image-wrapper,
+        .result__image,
+        .vertical--map__sidebar,
+        .vertical--map__sidebar__header,
+        .page-chrome_newtab,
+        .zci--type--tiles:not(.is-fallback).is-full-page.is-expanded,
+        .zci--type--tiles:not(.is-fallback).is-full-page.is-expanded .metabar:not(.is-stuck) {
+            background-color: @base;
+        }
+
+        body,
+        input,
+        select,
+        textarea,
+        .search__input--adv,
+        .adv {
+            color: @text;
+        }
+
+        .header-wrap {
+            background-color: @mantle !important;
+        }
+
+        .search--home,
+        .search--header,
+        .acp-wrap,
+        .acp-footer {
+            background-color: @surface0;
+            border-color: @surface0;
+        }
+
+        .search__button,
+        .search__button--hero,
+        .search__clear,
+        .search--home.has-text .search__clear,
+        .search__clear:focus,
+        .search__clear:hover,
+        .search__clear:active,
+        .search__clear:active:focus,
+        .search__clear:active:hover {
+            color: @text;
+        }
+
+        .search__input::placeholder,
+        .search__input--adv::placeholder {
+            color: @overlay1;
+        }
+
+        .search--hover .search__button {
+            background-color: @accent !important;
+            color: @crust !important;
+        }
+
+        .btn--icon,
+        .header__link,
+        .header__link:visited,
+        .header__label,
+        .showcase .social__link__text,
+        .header__button--menu,
+        .no-touch .btn--icon,
+        .no-touch .header__button,
+        .no-touch .header__button--menu {
+            color: @text;
+        }
+
+        a.header--text_promo--link,
+        a.header--text_promo--link:active,
+        a.header--text_promo--link:visited,
+        a.header--text_promo--link:hover {
+            color: @text;
+        }
+
+        .text_promo--badge {
+            background-color: @yellow;
+            color: @crust;
+        }
+
+        .showcase .showcase__heading,
+        .showcase .social__link__text:hover,
+        .header__link:hover,
+        .header__label:hover,
+        .header__clickable:hover {
+            color: @text;
+        }
+
+        .no-touch .site-wrapper .zcm__link,
+        .zcm__link,
+        .zcm__link:visited {
+            color: @text;
+        }
+
+        .dark-bg.is-vertical-tabs-exp #duckbar .zcm__link:not(.dropdown__button).is-active,
+        .dark-bg.is-vertical-tabs-exp #duckbar .zcm__link:not(.dropdown__button).is-active:active,
+        .dark-bg.is-vertical-tabs-exp #duckbar .zcm__link:not(.dropdown__button).is-active:hover {
+            color: @accent;
+            border-color: @accent;
+        }
+
+        .dropdown .dropdown__button {
+            color: @text;
+        }
+
+        #links {
+            --theme-col-txt-title: @text !important;
+            --theme-col-txt-url: @text !important;
+            --theme-col-txt-url-domain: @subtext1 !important;
+            --theme-col-txt-url-path: @subtext1 !important;
+            --theme-col-txt-snippet: @text !important;
+            --theme-col-bg-page: @mantle !important;
+        }
+
+        .modal--popout .modal__box::after {
+            color: @mantle;
+            border-color: @mantle !important;
+        }
+
+        .user-loc-tooltip__address,
+        .modal__header,
+        .modal--dropdown--region .modal__header .frm__input {
+            background-color: @mantle;
+            color: @text;
+        }
+
+        .modal--dropdown--region.modal--popout .modal__header::before {
+            color: @subtext1;
+        }
+
+        .modal__list__link:hover,
+        .modal__list__link.is-active,
+        .modal__list__link.is-highlighted,
+        .modal--dropdown--region .modal__list__link.is-highlighted,
+        .highlight .result__image,
+        .switch,
+        .modal--dropdown--settings .settings-dropdown--section .frm__field .frm__switch .frm__switch__label.btn {
+            background-color: @surface0;
+            color: @text;
+        }
+
+        .modal__body {
+            color: @text !important;
+            background-color: @mantle !important;
+        }
     }
 }
