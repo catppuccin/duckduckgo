@@ -190,6 +190,8 @@
         .search--home,
         .search--header,
         .acp-wrap,
+        .footer, 
+        .footer--mobile,
         .acp-footer {
             background-color: @surface0;
             border-color: @surface0;
@@ -305,6 +307,16 @@
         .modal__body {
             color: @text !important;
             background-color: @mantle !important;
+        }
+       .search-filters-wrap::before,.search-filters-wrap::after {
+            background-image:none;
+        }
+        .footer__card {
+            background-color:@base !important;
+        }
+        .btn.feedback-btn, .btn.feedback-btn a, .feedback-modal__submit.is-disabled, .feedback-modal__submit.is-disabled:hover, .feedback-modal__submit.is-disabled:active, .feedback-modal__submit.is-disabled:focus, .feedback-single-place-modal__disclaimer, .feedback-prompt, .feedback-prompt__link, .feedback-prompt__link:visited, .products-carousel.has-grid .module--carousel__main-source a, .products-carousel.has-grid .module--carousel__main-source a:visited, .module--carousel .module--carousel__main-source .js-badge--ad, .module--carousel .badge--ad-wrap--product-carousel .js-badge--ad, .module__more-at-and-feedback .module__more-at a, .btn.btn--skeleton, .btn.btn--skeleton:hover, .btn.is-disabled, .btn.is-disabled:hover{
+            background-color:@base;
+            color:@text;
         }
     }
 }
